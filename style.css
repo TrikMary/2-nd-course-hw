@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -5,12 +6,6 @@
 
 body {
   font-family: Montserrat;
-}
-
-.body_content {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 32px;
 }
 
 .center {
@@ -22,7 +17,6 @@ body {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) -7.355%, rgb(0, 9, 21) 100%), url(0001);
   background-image: url(./img/Rectangle\ 1.png);
   background-size: cover;
-  width: 1440px;
   height: 1024px;
   padding-top: 217px;
 }
@@ -68,10 +62,9 @@ body {
   display: flex;
   justify-content: center;
   gap: 32px;
-  background-color: #000915;
+  flex-wrap: nowrap;
   box-sizing: border-box;
-  padding-top: 128px;
-  padding-bottom: 128px;
+  background-color: #000915;
   border: none;
 }
 
@@ -89,4 +82,41 @@ body {
   left: 32px;
   bottom: 32px;
   position: absolute;
+}
+
+/* Стили для мобильного */
+@media (min-width: 375px) and (max-width: 1439px) {
+  .center {
+    padding-left: calc(50% - 171px);
+    padding-right: calc(50% - 171px);
+  }
+  .header {
+    height: 735px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+  }
+  .header__text_top {
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+  }
+  .header__text_content {
+    width: auto;
+    font-size: 14px;
+    text-align: center;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    background-color: #000915;
+    height: 1221px;
+  }
+  .img__game_class {
+    width: 343px;
+  }
 }/*# sourceMappingURL=style.css.map */
