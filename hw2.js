@@ -61,11 +61,11 @@ console.log(user.age);
 delete user['city of resident'];
 console.log(user['city of resident']);
 let info = prompt ("Что Вы хотите узнать о пользователе?","name");
-alert (info=user.name);
+alert (user[info]);
 info = prompt ("Что Вы хотите узнать о пользователе?","age");
-alert (info=user.age);
+alert (user[info]);
 info = prompt ("Что Вы хотите узнать о пользователе?","isAdmin");
-alert (info=user.isAdmin);
+alert (user[info]);
 
 let userName = prompt ("Как Вас зовут?");
 alert (`Привет, ${userName.toUpperCase()}!`);
