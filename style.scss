@@ -20,6 +20,11 @@ body {
     padding-left: calc(50% - 600px);
     padding-right: calc(50% - 600px);
 }
+
+.button:hover {
+    background: rgb(235, 68, 63);
+}
+
 .header {
     background: linear-gradient(180.00deg, rgba(0, 0, 0, 0) -7.355%,rgb(0, 9, 21) 100%),url(0001);
     background-image: url(./img/Rectangle\ 1.png);
@@ -63,16 +68,17 @@ body {
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
+        line-height: 22px;
         border: none;
     }
 }
 .content{
+    height: 556px;
     display: flex;
     justify-content: center;
     gap: 32px;
     flex-wrap: nowrap;
-    
+    align-items: center;
     box-sizing: border-box;
     background-color: #000915;
     // padding-top: 128px;
@@ -99,6 +105,52 @@ body {
         position: absolute;
     }
 }
+.content__next {
+    height: 800px;
+    background: rgb(0, 9, 21);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 135px;
+    &_left {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    &_text_top {
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 59px;
+        // text-align: left;
+    }
+    &_text {
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 32px;
+        // text-align: left;
+    }
+    &_button {
+        box-sizing: border-box;
+        width: 234.06px;
+        height: 48.6px;
+        border-radius: 30px;
+        background: rgb(156, 3, 50);
+        color: $colorText;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        border: none;
+    }
+}
+
 
     /* Стили для мобильного */
 
@@ -138,5 +190,26 @@ body {
     
     .img__game_class {
         width: 343px;
+    }
+    .content__next {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        &_left {
+            align-items: center;
+        }
+        &_text_top {
+            font-size: 32px;
+            line-height: 39px;
+            text-align: center;
+        }
+        &_text {
+            font-size: 14px;
+            line-height: 22px;
+            text-align: center;
+        }
+        &_img {
+            width: 344px;
+        }
     }
 }
