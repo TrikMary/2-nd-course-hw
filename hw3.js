@@ -1,6 +1,6 @@
 // Задание 1
 
-let password = "пароль";
+let  password = "пароль";
 let answer = prompt ("Введите пароль");
 if (password === answer) {
 console.log ("Пароль введен верно");    
@@ -11,10 +11,12 @@ console.log ("Пароль введен неправильно");
 // Задание 2
 
 let c = Number (prompt ("Введите любое число от 0 до 10"));
-if (c>0 && c<10) {
-console.log ("Верно");
-} else {
-console.log ("Неверно");
+if (c===0) {
+    console.log (`Без числа такое не пройдёт`);
+}else if (c>0 && c<10) {
+        console.log ("Верно");
+}  else {
+        console.log ("Неверно");
 }
 
 // Задание 3
@@ -67,31 +69,39 @@ console.log ("Сезоны закончились");
 
 // Задание 7 (дополнительное)
 
-let f = prompt ("Пожалуйста, введите любое число.");
-console.log(isNaN(f));
-let g = f%2;
-if (g===0) {
-    console.log("Число чётное");
-} else {
-    console.log("Число нечётное")
+let f = Number(prompt ("Пожалуйста, введите любое число."));
+if (isNaN(f)===true) { 
+    console.log("Это не число");
+}  else {
+    console.log (`Число получено`);
+    if (f===0) {
+        console.log (`С 0 такое не пройдёт`);
+    } else {
+        let g = f%2;
+        if (g===0) {
+            console.log("Число чётное");
+        } else {
+            console.log("Число нечётное");
+        }
+    }
 }
 
 // Задание 8 (дополнительное)
 
 let clientOS = confirm ("Вы используете операционную систему Android?");
-if (clientOS == 1) {
+if (clientOS == true) {
     console.log ("Установите версию приложения для Android по ссылке");
-} else if (clientOS == 0) {
+} else if (clientOS == false) {
     console.log ("Установите версию приложения для iOS по ссылке");
-} else {
-
-}
+} 
 
 // Задание 9 (дополнительное)
 
 let clientOS2 = confirm ("Вы используете операционную систему Android?");
 let clientDeviceYear = Number(prompt ("Год выпуска вашего телефона"));
-if (clientOS2 == 1) {
+if (clientDeviceYear===0) {
+    console.log(`Без данной информации мы не сможем предоставить актуальное приложение для вашей версии телефона`)
+} else if (clientOS2 == 1) {
     if (clientDeviceYear >= 2015) {
         console.log ("Установите версию приложения для Android по ссылке")
     } else {
