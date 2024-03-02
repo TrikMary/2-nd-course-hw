@@ -13,6 +13,10 @@ body {
   padding-right: calc(50% - 600px);
 }
 
+.button:hover {
+  background: rgb(235, 68, 63);
+}
+
 .header {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) -7.355%, rgb(0, 9, 21) 100%), url(0001);
   background-image: url(./img/Rectangle\ 1.png);
@@ -54,18 +58,25 @@ body {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 22px;
   border: none;
 }
 
 .content {
+  height: 556px;
   display: flex;
   justify-content: center;
   gap: 32px;
   flex-wrap: nowrap;
+  align-items: center;
   box-sizing: border-box;
   background-color: #000915;
   border: none;
+}
+
+.img__game:hover {
+  border: 3px solid rgb(68, 210, 255);
+  border-radius: 16px;
 }
 
 .game__img {
@@ -82,6 +93,50 @@ body {
   left: 32px;
   bottom: 32px;
   position: absolute;
+}
+
+.content-next {
+  height: 800px;
+  background: rgb(0, 9, 21);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 135px;
+}
+.content-next_left {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.content-next__top {
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 59px;
+}
+.content-next__text {
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+}
+.content-next__button {
+  box-sizing: border-box;
+  width: 234.06px;
+  height: 48.6px;
+  border-radius: 30px;
+  background: rgb(156, 3, 50);
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  border: none;
 }
 
 /* Стили для мобильного */
@@ -116,7 +171,28 @@ body {
     background-color: #000915;
     height: 1221px;
   }
-  .img__game_class {
+  .img__game {
     width: 343px;
+  }
+  .content-next {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+  .content-next_left {
+    align-items: center;
+  }
+  .content-next__top {
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+  }
+  .content-next__text {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+  }
+  .content-next__img {
+    width: 344px;
   }
 }/*# sourceMappingURL=style.css.map */

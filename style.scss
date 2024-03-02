@@ -20,6 +20,11 @@ body {
     padding-left: calc(50% - 600px);
     padding-right: calc(50% - 600px);
 }
+
+.button:hover {
+    background: rgb(235, 68, 63);
+}
+
 .header {
     background: linear-gradient(180.00deg, rgba(0, 0, 0, 0) -7.355%,rgb(0, 9, 21) 100%),url(0001);
     background-image: url(./img/Rectangle\ 1.png);
@@ -63,29 +68,30 @@ body {
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
+        line-height: 22px;
         border: none;
     }
 }
-.content{
+.content {
+    height: 556px;
     display: flex;
     justify-content: center;
     gap: 32px;
     flex-wrap: nowrap;
-    
+    align-items: center;
     box-sizing: border-box;
     background-color: #000915;
-    // padding-top: 128px;
-    // padding-bottom: 128px;
     border: none;
 }
+.img__game:hover {
+    border: 3px solid rgb(68, 210, 255);
+    border-radius: 16px;
+}
 
-.game {
+.game {    
     &__img {
         position: relative;
-        
     }
-    
     &__name {
         color: #FFF;
         font-family: Montserrat;
@@ -99,6 +105,50 @@ body {
         position: absolute;
     }
 }
+.content-next {
+    height: 800px;
+    background: rgb(0, 9, 21);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 135px;
+    &_left {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    &__top {
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 59px;
+    }
+    &__text {
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 32px;
+    }
+    &__button {
+        box-sizing: border-box;
+        width: 234.06px;
+        height: 48.6px;
+        border-radius: 30px;
+        background: rgb(156, 3, 50);
+        color: $colorText;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        border: none;
+    }
+}
+
 
     /* Стили для мобильного */
 
@@ -136,7 +186,28 @@ body {
         height: 1221px;
     }
     
-    .img__game_class {
+    .img__game {
         width: 343px;
+    }
+    .content-next {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        &_left {
+            align-items: center;
+        }
+        &__top {
+            font-size: 32px;
+            line-height: 39px;
+            text-align: center;
+        }
+        &__text {
+            font-size: 14px;
+            line-height: 22px;
+            text-align: center;
+        }
+        &__img {
+            width: 344px;
+        }
     }
 }
