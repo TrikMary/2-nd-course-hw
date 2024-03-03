@@ -195,4 +195,9 @@ body {
   .content-next__img {
     width: 344px;
   }
+  .content-next_reverse {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 64px;
+  }
 }/*# sourceMappingURL=style.css.map */
