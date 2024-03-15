@@ -123,23 +123,26 @@ console.log("Задание 11");
 
 const arrSq = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 7];
 function sqArr (arrSq) {
-    return squaredArr = arrSq.map (item => (item**2));
+    return arrSq.map (item => (item**2));
+    
 };
+sqArr(arrSq);
 console.log(sqArr(arrSq));
 
 // Задание 12
 console.log("Задание 12");
 
 const arrSt = ["Массив", "из", "произвольных", "слов", "для", "расчёта", "длины", "слов", "в", "нём"];
-let arrLength = [];
+
 function arrStLenght(arrSt) {
+    let arrLength = [];
     for (let el = 0; el < arrSt.length; el++) {
         arrLength.push(arrSt[el].length);
-            
     }
+    return arrLength;
 }
 arrStLenght(arrSt);
-console.log(arrLength);
+
 
 // через map
 function arrLenght (arrSt) {
@@ -159,10 +162,12 @@ function minusArr (arrForMinus) {
             resultMas.push(arrForMinus[i]);
         }
     };
-    return resalt = resultMas;
+    return resultMas,
+    console.log(resultMas);
+    
 }
 minusArr(arrForMinus);
-console.log(resalt);
+
 
 // Задание 14
 console.log("Задание 14");
@@ -170,7 +175,8 @@ console.log("Задание 14");
 const arrRandom = [];
 
 for (let i = 0; i < 10; i++ ) {
-    let j = (Math.random() * 10), g = Math.floor(j);
+    
+    g = Math.floor(Math.random() * 10);
     arrRandom.push(g);
 } 
 
@@ -185,7 +191,7 @@ console.log("Задание 15");
 const arrRand = [];
 
 for (let i = 0; i < 6; i++ ) {
-    let j = Math.round(Math.random() * (10 - 1) + 1);
+    let j = Math.round(Math.random() * 9 + 1);
     arrRand.push(j);
 } 
 
