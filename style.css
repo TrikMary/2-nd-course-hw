@@ -101,7 +101,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  row-gap: 135px;
+  gap: 135px;
 }
 .content-next_left {
   display: flex;

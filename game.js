@@ -30,3 +30,52 @@ function seasons() {
         }
     }    
 }
+
+
+// Игра Запомни слова
+
+function fruitGame() {
+    let fruitArr = ["Яблоко", "Груша", "Дыня", "Виноград", "Персик", "Апельсин", "Мандарин"];
+
+    fruitArr = fruitArr.sort(() => Math.random() - 0.5);
+
+    alert (`Запомни несколько слов ${fruitArr}`);
+    firstAnswer(fruitArr);
+
+    function firstAnswer (fruitArr) {
+        let answer = prompt("Вспомните, какое слово было первым?");
+        if (!answer) {
+            alert ("Кажется кто-то забыл ввести слово");
+            tryAgain();
+        } else {
+            if (answer.toLowerCase () === fruitArr [0].toLowerCase ()) {
+                alert ("Верно, пол дела сделано");
+                lastAnswer(fruitArr);
+            } else {
+                alert ("Не верно, будь внимательнее");
+                tryAgain ();
+            }
+        }     
+    }
+    function lastAnswer (fruitArr) {
+        let answer = prompt("Вспомните, какое слово было последним?");
+        if (!answer) {
+            alert ("Кажется кто-то забыл ввести слово");
+            tryAgain();
+        } else {
+            if (answer.toLowerCase () === fruitArr [fruitArr.length - 1].toLowerCase ()) {
+                alert ("Поздравляю, ты угадал оба слова");
+                tryAgain ();
+            } else {
+                alert ("Не верно, будь внимательнее");
+                tryAgain ();
+            }
+        }
+    }
+    function tryAgain () {
+        let again = confirm ("Не расстраивайся, хочешь попробовать еще раз?.");
+        if (again == true) {
+            fruitGame();
+        }
+    }
+}

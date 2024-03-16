@@ -162,8 +162,8 @@ function minusArr (arrForMinus) {
             resultMas.push(arrForMinus[i]);
         }
     };
-    return resultMas,
     console.log(resultMas);
+    return resultMas;
     
 }
 minusArr(arrForMinus);
@@ -176,7 +176,7 @@ const arrRandom = [];
 
 for (let i = 0; i < 10; i++ ) {
     
-    g = Math.floor(Math.random() * 10);
+    let g = Math.floor(Math.random() * 10);
     arrRandom.push(g);
 } 
 
