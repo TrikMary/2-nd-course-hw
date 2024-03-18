@@ -59,14 +59,14 @@ console.log("Задание 6");
 function createArrN (x) {
     console.log(x);
 
-    y = x / 2;
+    let y = x / 2;
     if (x%2 ===1) {
         y = Math.floor(x/2);
     }
     console.log(y);
 
     let arr = [];
-    for (i = 0; i < y; i++) {
+    for (let i = 0; i < y; i++) {
         arr.push(Math.floor(Math.random()*x));
     }
     console.log(arr);
