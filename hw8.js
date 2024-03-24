@@ -65,7 +65,7 @@ console.log("Задание 5")
 
 // Функция delayForSecond через 1 секунду пишет в консоль 
 // «Прошла одна секунда», а затем вызывает переданный колбэк
-function delayForSecond(cb) {
+function leftForSecond(cb) {
     setTimeout(() => {
         console.log('Прошла одна секунда');
         if(cb) {  cb(); }
@@ -80,4 +80,4 @@ function sayHi (name) {
 // Код выше менять нельзя
 
 // изменяем код ниже
-delayForSecond(() => sayHi("Олег"));
+leftForSecond(() => sayHi("Олег"));
